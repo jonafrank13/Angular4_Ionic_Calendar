@@ -1,0 +1,104 @@
+simple-calendar {
+	.container{
+	  display: flex;
+	  flex-flow: column;
+	}
+	.calendar{
+	  color: #31353b;
+	  position: relative;
+	  padding: 1px 29px 16px 20px;
+	  border-bottom: 1px solid #999;
+	}
+	.calendar-gotoday{
+	  position: absolute;
+	  width: 30px;
+	  height: 30px;
+	  border-radius: 50%;
+	  background: #4476bb;
+	  right: 10px;
+	  text-align: center;
+	  line-height: 28px;
+	  top: 13px;
+	  font-size: 0.7em;
+	  color: white;
+	}
+	.calendar-navigation{
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		line-height: 50px;
+	}
+	.calendar-prev{
+		color: #999999;
+		margin-left: 2%;
+		font-size: 25px;
+		font-weight: lighter;
+		padding: 0px 5px 0px 5px;
+	}
+	.calendar-title{
+		font-weight: bolder;
+	}
+	.calendar-next{
+		color: #999999;
+		margin-right: 6%;
+		font-size: 25px;
+		font-weight: lighter;
+		padding: 0px 5px 0px 5px;
+	}
+	.calendar-days{
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		line-height: 25px;
+	}
+	.calendar-days>div{
+		font-size: 0.7em;
+		width: 35px;
+		height: 35px;
+		text-align: center;
+	}
+	.calendar-week{
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		line-height: 25px;
+	}
+	.calendar-date{
+		text-align: center;
+    width: 27px;
+    height: 27px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    position: relative;
+    vertical-align: middle;
+	}
+	.calendar-diff-month{
+		color: #999999;
+	}
+	.calendar-has-event:after{
+		content: '.';
+		color: red !important;
+		font-size: 30px;
+		bottom: -7px;
+		left: 10px;
+		position: absolute;
+	}
+	.calendar-current-date{
+		background: #4476bb;
+		color: white;
+	}
+	.calendar-selected-date, .calendar-selected-date:active{
+		color: #5898e3;
+		border: 1px solid #5898e3;
+	}
+	.calendar-current-date:after{
+	    color: white;
+	}
+	.calendar-hide{
+		display: none;
+	}
+	.calendar-sunday{
+	    color: red;
+	}
+}

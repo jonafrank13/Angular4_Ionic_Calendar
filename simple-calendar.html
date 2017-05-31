@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="calendar full-width" >
+    <div class="calendar-navigation full-width">
+      <div class="calendar-prev" id="calendar-prev" (click)="calendarPrevious()">
+        <ion-icon class="icon-left-arrow"></ion-icon>
+      </div>
+      <div class="calendar-title" id="calendar-title">{{formatDate(visitingDate)}}</div>
+      <div class="calendar-next" id="calendar-next" (click)="calendarNext()">
+        <ion-icon class="icon-right-arrow"></ion-icon>
+      </div>
+    </div>
+    <div [ngClass]="{ 'calendar-hide':hideCalendar() }" class="calendar-days">
+      <div *ngFor="let day of days; let index = index" [ngClass]="{'calendar-sunday': index == 6 }">{{day}}</div>
+    </div>
+    <div *ngIf="showReset()" (click)="resetCalendar()" class="calendar-gotoday">
+      {{today}}
+    </div>
+    <div class="calendar-week" [ngClass]="{ 'calendar-hide':hideCalendar() }" *ngFor="let week of calendarMatrix">
+      <div class="calendar-date" *ngFor="let day of week; let index = index" (click)="selectDate(day)" [ngClass]="getClasses(day,index)">
+        {{day.getDate()}}
+      </div>
+    </div>
+  </div>
+</div>
